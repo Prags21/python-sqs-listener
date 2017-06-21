@@ -39,7 +39,7 @@ Here is a basic code sample:
     from sqs_listener import SqsListener
     class MyErrorListener(SqsListener):
         def handle_message(self, body, attributes, messages_attributes):
-            save_to_log(body['exception_type'], body['error_message']
+            save_to_log(body['exception_type'], body['error_message'])
 
     error_listener = MyErrorListener('my-error-queue')
     error_listener.listen()
